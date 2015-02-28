@@ -11,4 +11,5 @@ gulp.task 'watch', ->
 
 gulp.task 'coffee', ->
     gulp.src('coffee/*.coffee')
+    .pipe(coffee().on('error', gutil.log))
     .pipe(gulp.dest('./public/javascripts/'))
