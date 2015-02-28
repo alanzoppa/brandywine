@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "gulp coffee && bower install && node ./bin/www"
+    "start": "gulp coffee && node ./bin/www"
   },
   "dependencies": {
     "body-parser": "~1.10.2",

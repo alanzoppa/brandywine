@@ -29,7 +29,6 @@ node_modules
 # Debug log from npm
 npm-debug.log
 
-public/bower/*
 public/javascripts/*
 public/stylesheets/*.css
 .DS_Store
