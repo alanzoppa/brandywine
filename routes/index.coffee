@@ -4,6 +4,8 @@ display_settings = require("../display_settings.json")
 marked = require 'marked'
 fs = require 'fs'
 
+marked.setOptions(sanitize: false)
+
 for page in display_settings.pages
   if page.markdown
     path = "./markdown/#{page.slug}.md"

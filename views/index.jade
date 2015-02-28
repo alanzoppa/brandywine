@@ -7,9 +7,8 @@ block content
                 div.background
                 div.background.filtered
                     article
+                div.arrow.fa.fa-arrow-circle-up
                 article
-                    if page.image
-                        div.image
-                            img(src=page.image.url, title=page.image.title)
                     if page.html
                         div.content!= page.html
+                div.arrow.fa.fa-arrow-circle-down

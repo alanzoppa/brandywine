@@ -1,4 +1,5 @@
 @import "reset.less";
+@import "../bower/font-awesome/css/font-awesome.min.css";
 
 body {
     padding: 50px;
@@ -38,11 +39,31 @@ section {
             filter: blur(@blurRadius) sepia(@sepia);
             &.visible {
                 opacity: 1;
-                transition: opacity 8s ease;
+                transition: opacity 7s ease;
             }
         }
     }
 
+    div.fa.arrow {
+      position: absolute;
+      opacity: .7;
+      width: 100%;
+      text-align: center;
+      font-size: 50px;
+      color: @eggshell;
+      text-shadow: 0px 0px 4px @salmon;
+      &::before {
+        cursor: pointer;
+      }
+
+      &.fa-arrow-circle-up {
+        top: 10px;
+      }
+
+      &.fa-arrow-circle-down {
+        bottom: 10px;
+      }
+    }
 
     article {
         position: relative;
@@ -60,11 +81,12 @@ section {
         h1,h2 {
             color: @black;
             text-align: center;
-            font-size: 37px;
+            font-size: 30px;
             text-transform: lowercase;
             margin-bottom: 10px;
         }
-        h3 {
+        h5 {
+          margin-bottom: 10px;
           text-align: center;
           font-size: 14px;
         }
@@ -86,11 +108,8 @@ section {
 
     &#brandywine-acres {
         div.background {
-            background: transparent url('/images/winter.jpg') center center;
+            background: transparent url('/images/lettuce.jpg') center center;
             background-size: cover;
-            &.visible {
-                opacity: .7;
-            }
         }
         h1 {
             margin-bottom: 9px;
@@ -99,13 +118,13 @@ section {
     }
     &#now-available {
         div.background {
-            background: transparent url('/images/bird.jpg') center center;
+            background: transparent url('/images/honeycomb.jpg') center center;
             background-size: cover;
         }
     }
     &#about {
         div.background {
-            background: transparent url('/images/dog.jpg') center center;
+            background: transparent url('/images/winter.jpg') center center;
             background-size: cover;
         }
     }
