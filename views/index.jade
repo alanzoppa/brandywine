@@ -8,5 +8,8 @@ block content
                 div.background.filtered
                     article
                 article
+                    if page.image
+                        div.image
+                            img(src=page.image.url, title=page.image.title)
                     if page.html
                         div.content!= page.html

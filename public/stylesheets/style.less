@@ -1,52 +1,7 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-    display: block;
-}
-body {
-    line-height: 1;
-}
-ol, ul {
-    list-style: none;
-}
-blockquote, q {
-    quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
-}
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-
+@import "reset.less";
 
 body {
     padding: 50px;
-    /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
     font-family: Verdana, Geneva, sans-serif;
 }
 
@@ -63,8 +18,8 @@ a {
 
 @black: #111;
 
-@blurRadius: 2px;
-@sepia: 80%;
+@blurRadius: 4px;
+@sepia: 70%;
 
 section {
 
@@ -83,7 +38,7 @@ section {
             filter: blur(@blurRadius) sepia(@sepia);
             &.visible {
                 opacity: 1;
-                transition: opacity 10s ease;
+                transition: opacity 8s ease;
             }
         }
     }
@@ -94,7 +49,7 @@ section {
         top: 50%;
         transform: translateY(-50%);
         background: @eggshell;
-        opacity: 0.7;
+        opacity: 0.9;
         width: 90%;
         max-width: 500px;
         margin-left: auto;
@@ -102,16 +57,30 @@ section {
         padding: 6px;
         border-radius: 4px;
 
-        h2 {
+        h1,h2 {
             color: @black;
             text-align: center;
             font-size: 37px;
             text-transform: lowercase;
+            margin-bottom: 10px;
+        }
+        h3 {
+          text-align: center;
+          font-size: 14px;
         }
         p {
-            text-align: center;
-            font-size: 15px;
-            font-style: italic;
+            font-size: 14px;
+            margin: 10px auto;
+            line-height: 125%;
+        }
+        img {
+            width: 100%;
+        }
+        ul {
+            list-style: disc;
+            li {
+                margin-left: 2em;
+            }
         }
     }
 
@@ -123,7 +92,7 @@ section {
                 opacity: .7;
             }
         }
-        h2 {
+        h1 {
             margin-bottom: 9px;
         }
 
@@ -133,14 +102,12 @@ section {
             background: transparent url('/images/bird.jpg') center center;
             background-size: cover;
         }
-        color: @eggshell;
     }
     &#about {
         div.background {
             background: transparent url('/images/dog.jpg') center center;
             background-size: cover;
         }
-        color: @eggshell;
     }
 }
 
