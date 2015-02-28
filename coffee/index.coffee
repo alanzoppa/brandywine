@@ -6,7 +6,7 @@ $(document).ready ->
      easing: "ease"
      animationTime: 1000
      pagination: false
-     updateURL: true
+     #updateURL: true
      loop: true
      keyboard: true
      responsiveFallback: false

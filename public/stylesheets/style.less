@@ -23,6 +23,7 @@ a {
 @sepia: 70%;
 
 section {
+    font-size: 35px;
 
     div.background {
         position: absolute;
@@ -49,7 +50,7 @@ section {
       opacity: .7;
       width: 100%;
       text-align: center;
-      font-size: 50px;
+      font-size: 4em;
       color: @eggshell;
       text-shadow: 0px 0px 4px @salmon;
       &::before {
@@ -72,7 +73,6 @@ section {
         background: @eggshell;
         opacity: 0.9;
         width: 90%;
-        max-width: 500px;
         margin-left: auto;
         margin-right: auto;
         padding: 6px;
@@ -81,22 +81,23 @@ section {
         h1,h2 {
             color: @black;
             text-align: center;
-            font-size: 30px;
-            text-transform: lowercase;
-            margin-bottom: 10px;
+            margin-bottom: 25px;
+            font-size: 2em;
+            font-weight: bold;
         }
         h5 {
           margin-bottom: 10px;
           text-align: center;
-          font-size: 14px;
+          height: 40px;
         }
         p {
-            font-size: 14px;
+            line-height: 1em;
             margin: 10px auto;
             line-height: 125%;
         }
         img {
-            width: 100%;
+            width: 80%;
+            margin-left: 10%;
         }
         ul {
             list-style: disc;
@@ -112,9 +113,6 @@ section {
             background: transparent url('/images/lettuce.jpg') center center;
             background-size: cover;
         }
-        h1 {
-            margin-bottom: 9px;
-        }
 
     }
     &#now-available {
@@ -128,6 +126,16 @@ section {
         div.background {
             background: transparent url('/images/winter.jpg') center center;
             background-size: cover;
+        }
+    }
+}
+
+
+@media (min-device-width: 451px) {
+    section {
+        font-size: 20px;
+        article {
+            max-width: 450px;
         }
     }
 }
