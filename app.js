@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var livereload = require('express-livereload');
+require('coffee-script/register')
 
 
 var routes = require('./routes/index');

@@ -16,8 +16,8 @@ $(document).ready ->
                                       # the browser's width is less than 600, the fallback will kick in.
      direction: "vertical"            # You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
      afterMove: (index)->
-       console.log index
-       incomingSection = $('.main section:nth-child(' + index + ') div.background.filtered').addClass('visible')
+       previoiusSection = $('.main section div.background.filtered').removeClass('visible')
+       incomingSection = $(".main section:nth-child(#{index}) div.background.filtered").addClass('visible')
 
 
   console.log $('.main section:nth-child(1) div.background.filtered').addClass('visible')
