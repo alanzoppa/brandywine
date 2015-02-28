@@ -1,0 +1,17 @@
+{
+  "name": "brandywine",
+  "version": "0.0.0",
+  "authors": [
+    "C. Alan Zoppa <alan.zoppa@gmail.com>"
+  ],
+  "license": "MIT",
+  "directory": "public/bower/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ]
+}

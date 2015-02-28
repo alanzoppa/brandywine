@@ -1,0 +1,146 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+body {
+    padding: 50px;
+    /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+a {
+    color: #00B7FF;
+}
+
+@green: #7ADB72;
+@purple: #55134E;
+@palePurple: #A0596B;
+@yellow: #FEC343;
+@salmon: #EF7351;
+@eggshell: #F5F5F5;
+
+@black: #111;
+
+@blurRadius: 2px;
+@sepia: 80%;
+
+section {
+
+    div.background {
+        position: absolute;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        &.filtered {
+            z-index: 0;
+            opacity: 0;
+            -webkit-filter: blur(@blurRadius) sepia(@sepia);
+            -moz-filter: blur(@blurRadius) sepia(@sepia);
+            -o-filter: blur(@blurRadius) sepia(@sepia);
+            -ms-filter: blur(@blurRadius) sepia(@sepia);
+            filter: blur(@blurRadius) sepia(@sepia);
+            &.visible {
+                opacity: 1;
+                transition: opacity 10s ease;
+            }
+        }
+    }
+
+
+    article {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        background: @eggshell;
+        opacity: 0.7;
+        width: 90%;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 6px;
+        border-radius: 4px;
+
+        h2 {
+            color: @black;
+            text-align: center;
+            font-size: 37px;
+            text-transform: lowercase;
+        }
+        p {
+            text-align: center;
+            font-size: 15px;
+            font-style: italic;
+        }
+    }
+
+    &#brandywine-farm {
+        div.background {
+            background: transparent url('/images/winter.jpg') center center;
+            background-size: cover;
+            &.visible {
+                opacity: .7;
+            }
+        }
+        h2 {
+            margin-bottom: 9px;
+        }
+
+    }
+    &#now-available {
+        div.background {
+            background: transparent url('/images/bird.jpg') center center;
+            background-size: cover;
+        }
+        color: @eggshell;
+    }
+    &#about {
+        div.background {
+            background: transparent url('/images/dog.jpg') center center;
+            background-size: cover;
+        }
+        color: @eggshell;
+    }
+}
+

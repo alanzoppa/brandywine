@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    div.main
+        each page in pages
+            section(id=page.slug)
+                div.background
+                div.background.filtered
+                    article
+                article
+                    h2= page.title
+                    p foo

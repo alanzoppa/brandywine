@@ -1,0 +1,25 @@
+{
+  "title1": "Brandywine Farm",
+  "title2": "Now Available",
+  "title3": "About",
+  "map_url": "https://www.google.com/maps/place/5168+Belding+Rd+NE,+Rockford,+MI+49341/@43.086203,-85.541225,17z/data=!4m7!1m4!3m3!1s0x8818558b2c215a2f:0x84544abd3dac41d2!2s5168+Belding+Rd+NE,+Rockford,+MI+49341!3b1!3m1!1s0x8818558b2c215a2f:0x84544abd3dac41d2",
+  "postal_address": "5168 Belding Rd NE, Rockford, MI 49341",
+  "pages": [
+    {
+      "slug": "brandywine-farm",
+      "title": "brandywine farm",
+      "markdown": true
+    },
+    {
+      "slug": "now-available",
+      "title": "now available",
+      "markdown": false
+    },
+    {
+      "slug": "about",
+      "title": "about.",
+      "markdown": false
+    }
+
+  ]
+}
