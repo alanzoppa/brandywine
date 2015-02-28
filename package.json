@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "gulp coffee && node ./bin/www"
   },
   "dependencies": {
     "body-parser": "~1.10.2",
@@ -15,14 +15,9 @@
     "marked": "^0.3.3",
     "morgan": "~1.5.1",
     "q": "^1.2.0",
-    "serve-favicon": "~2.2.0"
-  },
-  "devDependencies": {
-    "express-livereload": "0.0.24",
+    "serve-favicon": "~2.2.0",
     "gulp": "^3.8.11",
-    "gulp-batch": "^1.0.5",
     "gulp-coffee": "^2.3.1",
-    "gulp-express": "^0.1.13",
     "gulp-util": "^3.0.4",
     "gulp-watch": "^4.1.1"
   }
