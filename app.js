@@ -4,7 +4,6 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var livereload = require('express-livereload');
 require('coffee-script/register')
 
 
@@ -58,7 +57,6 @@ app.use(function(err, req, res, next) {
         message: err.message,
         error: {}
     });
-    livereload(app, config={})
 });
 
 
