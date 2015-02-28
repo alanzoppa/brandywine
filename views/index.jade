@@ -8,5 +8,5 @@ block content
                 div.background.filtered
                     article
                 article
-                    h2= page.title
-                    p foo
+                    if page.html
+                        div.content!= page.html
