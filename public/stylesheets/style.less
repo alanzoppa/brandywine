@@ -57,11 +57,11 @@ section {
         cursor: pointer;
       }
 
-      &.fa-arrow-circle-up {
+      &.fa-chevron-up {
         top: 10px;
       }
 
-      &.fa-arrow-circle-down {
+      &.fa-chevron-down {
         bottom: 10px;
       }
     }
@@ -108,7 +108,7 @@ section {
     }
 
     &#brandywine-acres {
-        .fa-arrow-circle-up {display: none;}
+        .fa-chevron-up {display: none;}
         div.background {
             background: transparent url('/images/lettuce.jpg') center center;
             background-size: cover;
@@ -122,7 +122,7 @@ section {
         }
     }
     &#about {
-        .fa-arrow-circle-down {display: none;}
+        .fa-chevron-down {display: none;}
         div.background {
             background: transparent url('/images/winter.jpg') center center;
             background-size: cover;
@@ -140,3 +140,9 @@ section {
     }
 }
 
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+    div.arrow {display: none;}
+}
