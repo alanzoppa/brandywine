@@ -47,36 +47,41 @@ section {
 
     div.fa.arrow {
       position: absolute;
-      opacity: .7;
+      opacity: .5;
       width: 100%;
       text-align: center;
       font-size: 4em;
       color: @eggshell;
       text-shadow: 0px 0px 4px @salmon;
+      -webkit-filter: blur(1px);
+      -moz-filter: blur(1px);
+      -o-filter: blur(1px);
+      -ms-filter: blur(1px);
+      filter: blur(1px);
       &::before {
         cursor: pointer;
       }
 
-      &.fa-chevron-up {
+      &.fa-arrow-circle-up {
         top: 10px;
       }
 
-      &.fa-chevron-down {
+      &.fa-arrow-circle-down {
         bottom: 10px;
       }
     }
 
     article {
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
         background: @eggshell;
         opacity: 0.9;
         width: 90%;
-        margin-left: auto;
-        margin-right: auto;
+        height: 70%;
         padding: 6px;
         border-radius: 4px;
+
+        margin: auto;
+        position: absolute;
+        top: 0; left: 0; bottom: 0; right: 0;
 
         h1,h2 {
             color: @black;
@@ -86,7 +91,7 @@ section {
             font-weight: bold;
         }
         h5 {
-          margin-bottom: 10px;
+          margin-bottom: 40px;
           text-align: center;
           height: 40px;
         }
@@ -108,7 +113,10 @@ section {
     }
 
     &#brandywine-acres {
-        .fa-chevron-up {display: none;}
+        article {
+          height: 300px;
+        }
+        .fa-arrow-circle-up {display: none;}
         div.background {
             background: transparent url('/images/lettuce.jpg') center center;
             background-size: cover;
@@ -122,7 +130,10 @@ section {
         }
     }
     &#about {
-        .fa-chevron-down {display: none;}
+        article {
+          height: 450px;
+        }
+        .fa-arrow-circle-down {display: none;}
         div.background {
             background: transparent url('/images/winter.jpg') center center;
             background-size: cover;
@@ -136,13 +147,9 @@ section {
         font-size: 20px;
         article {
             max-width: 450px;
+            h5 {
+              margin-bottom: 15px;
+            }
         }
     }
-}
-
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : landscape) {
-    div.arrow {display: none;}
 }
